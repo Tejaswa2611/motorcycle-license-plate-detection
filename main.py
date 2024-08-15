@@ -7,12 +7,12 @@ source = 'test_video.mp4'
 
 save_video = True # want to save video? (when video as source)
 show_video=True # set true when using video file
-save_img=False  # set true when using only image file to save the image
+save_img=True  # set true when using only image file to save the image
 # when using image as input, lower the threshold value of image classification
 
 #saveing video as output
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.avi', fourcc, 20.0, frame_size)
+out = cv2.VideoWriter('output.mp4', fourcc, 20.0, frame_size)
 
 cap = cv2.VideoCapture(source)
 while(cap.isOpened()):
